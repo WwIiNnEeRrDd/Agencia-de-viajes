@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de viajes</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://kit.fontawesome.com/966df1305a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <div class="nav">
+                <aside>
+                    <i class="fa-solid fa-plane fa-3x"></i>
+                    <h1>Travel Agency</h1>
+                </aside>
+                <i class="fa-solid fa-bars fa-3x dropdown"></i>
+                <div class="menu-version-desktop">
+                    <a href="#viajes">Viajes</a>
+                    <a href="#Ofertas-recientes">Ofertas Recientes</a>
+                    <a href="#Ofertas-vendidas">Ofertas Mas Vendidas</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+        </nav>
+        <div class="buscar">
+            <div class="busqueda">
+                <h2>Ordenar Por:</h2>
+                <select id="opciones" name="opciones">
+                    <option value="opcion1">Destino</option>
+                    <option value="opcion1">Actividades</option>
+                    <option value="opcion1">Duracion</option>
+                    <option value="opcion1">Precio</option>
+                </select>
+            </div>
+        </div>
+        <main>
+            <div class="Nosotros" id="viajes">
+                <img src="./assets/img/viajaconnostros.jpeg">
+                <p>Encuentra tus mejores vacaciones al mejor precio</p>
+                <button>Viaja Con Nosotros</button>
+            </div>
+            <div class="Ofertas-recientes" id="Ofertas-recientes">
+                <p>Ofertas recientes</p>
+                <div class="seccion-productos">
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="Ofertas-vendidas" id="Ofertas-vendidas">
+                <p>Ofertas mas vendidas</p>
+                <div class="seccion-productos">
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cruceros">
+                <p>Cruceros</p>
+                <div class="seccion-productos">
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/car.webp">
+                        <h3>Audi Sport Collection</h3>
+                        <button>Ver más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="contacto" id="contacto">
+                <h2>Contacto</h2>
+                <form class="form-contacto" action="#" method="post">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                    
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            
+            
+        </main>
+        <footer>
+            <h1>Informacion de Contacto:</h1>
+            <p>Telefono: +(50) 4040-3030</p>
+            <p>Email: Agenciadeviajes@gmail.com</p>
+            <p>Ubicacion: Panama, Ciudad de Panama</p>
+            <h2>Redes sociales:</h2>
+            <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+            <h2>Todos los derechos reservados</h2>
+        </footer>
+    </div>
+</body>
+</html>

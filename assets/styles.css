@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    grid-area: navegacion;
+    background-color: rgb(37, 37, 189);
+}
+
+.buscar{
+    grid-area: buscar;
+    background-color: rgb(122, 220, 239);
+}
+
+main{
+    grid-area: principal;
+    background-color: rgb(37, 37, 189);
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(122, 220, 239);
+}
+
+.main-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 12fr 1fr;
+    grid-template-areas: 
+        'navegacion'
+        'buscar'
+        'principal'
+        'footer'
+    ;
+    height: 100vh;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    animation: cambiartamanoparaabajo 0.8s ease-out forwards;
+}
+
+.nav aside{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3%;
+}
+
+.nav aside h1{
+    font-size: 23px;
+}
+
+.nav i{
+    display: flex;
+    align-items: center;
+    padding: 3%;
+}
+
+.nav .menu-version-desktop{
+    display: none;
+}
+
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    color: white;
+}
+
+.busqueda h2{
+    margin-bottom: 2%;
+    font-size: 23px;
+}
+
+.busqueda select{
+    width: 80%;
+    padding: 1%;
+    font-size: 23px;
+}
+
+.Nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+
+.Nosotros img{
+    width: 70%;
+}
+
+.Nosotros p{
+    color: white;
+    font-size: 25px;
+    margin-top: 3%;
+}
+
+.Nosotros button{
+    background-color: darkblue;
+    width: 30%;
+    padding: 2%;
+    color: white;
+    font-size: 14px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.Ofertas-recientes, .Ofertas-vendidas, .cruceros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Ofertas-recientes p, .Ofertas-vendidas p, .cruceros p{
+    color: white;
+    font-size: 25px;
+}
+
+.seccion-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 8%;
+    background-color: white;
+    border: 2px solid rgb(92, 92, 95);
+    text-align: center;
+}
+
+.card img{
+    width: 80%;
+    object-fit: cover;
+    margin-bottom: 2%;
+}
+
+.card h3{
+    margin-bottom: 2%;
+    font-size: 23px;
+}
+
+.card button{
+    background-color: darkblue;
+    width: 30%;
+    padding: 2%;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 3%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 5%;
+    animation: cambiartamano 0.8s ease-out forwards;
+}
+
+.form-contacto{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.form-contacto label, .form-contacto input, .form-contacto textarea{
+    padding: 1%;
+    width: 80%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.form-contacto button{
+    background-color: darkblue;
+    width: 50%;
+    padding: 2%;
+    color: white;
+    font-size: 14px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 2%;
+}
+
+footer i{
+    color: white;
+    margin-bottom: 1%
+}
+
+footer h2, footer h1, footer p{
+    margin-bottom: 1%
+}
+
+@keyframes cambiar {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cambiartamano {
+    from {
+        transform: translateY(50px) scale(0.8); /* Desplazado hacia abajo y reducido en tamaño */
+    }
+    to {
+        transform: translateY(0) scale(1); /* Posición original y tamaño completo */
+    }
+}
+
+@keyframes cambiartamanoparaabajo {
+    from {
+        transform: translateY(-50px) scale(0.8); /* Desplazado hacia arriba y reducido en tamaño */
+    }
+    to {
+        transform: translateY(0) scale(1); /* Posición original y tamaño completo */
+    }
+}
+
+.seccion-productos .card {
+    opacity: 0; 
+    animation: cambiar 0.8s ease-in-out forwards; 
+    animation-delay: calc(var(--delay) * 0.1s); 
+}
+
+@media (min-width: 576px){
+    
+    .main-container{
+        display: grid;
+        grid-template-columns: 2fr 8fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'navegacion buscar'
+            'navegacion principal'
+            'footer footer'
+        ;
+        height: 100vh;
+    }
+
+    .card{
+        width: 23%;
+        margin: 0;
+    }
+    
+    nav{
+        background-color: #4f518d;
+    }
+
+    .nav{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    
+    .nav aside{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 5%;
+    }
+
+    .nav .dropdown{
+        display: none;
+    }
+
+    .nav .menu-version-desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+
+    .nav .menu-version-desktop a{
+        margin-bottom: 10%;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+
+    .seccion-productos{
+        justify-content: flex-start;
+    }
+}
+
